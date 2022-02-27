@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var s string
+
+	fmt.Scanln(&s)
+
+	if s[0:1] == "i" || s[0:1] == "I" {
+		if s[len(s)-1:] == "n" || s[len(s)-1:] == "N" {
+			if strings.ContainsAny(s, "a") || strings.ContainsAny(s, "A") {
+				fmt.Printf("Found!")
+			}
+		}
+	} else {
+		fmt.Printf("Not Found!")
+	}
+
+}

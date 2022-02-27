@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+
+	sli := make([]int, 3)
+	for {
+		var x int
+		fmt.Println("Enter an integer")
+		if _, err := fmt.Scanln(&x); err != nil {
+			break
+		}
+		sli = append(sli, x)
+		sort.Ints(sli)
+		fmt.Println(sli)
+	}
+
+}

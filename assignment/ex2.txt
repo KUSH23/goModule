@@ -1,0 +1,81 @@
+package main
+
+import "fmt"
+
+// type P struct {
+// 	x string
+// 	y int
+// }
+
+func main() {
+
+	// b := P{"x", -1}
+
+	// a := [...]P{{"a", 10}, {"b", 2}, {"c", 3}}
+
+	// for _, z := range a {
+	// 	if z.y > b.y {
+	// 		b = z
+	// 	}
+	// }
+	// fmt.Println(b.x)
+
+	x := [...]int{1, 2, 3, 4, 5}
+	y := x[0:2]
+	z := x[1:4]
+	fmt.Print(len(y), cap(y), len(z), cap(z))
+
+	// var x [5]int
+	// var x [5]int = [5]int{1, 2, 3, 4, 5}
+	// x := [...]int{1, 2, 5, 4}
+
+	// for i, v := range x {
+	// 	fmt.Println(i, "=>", v)
+	// }
+	// sli := make([]int, 0, 3)
+	// sli = append(sli, 10)
+	// sli = append(sli, 20)
+	// sli = append(sli, 30)
+	// sli = append(sli, 40)
+	// x[0] = 2
+	// if len(sli) > 0 {
+	// 	fmt.Println(sli[len(sli)-1])
+	// }
+
+	// println(len(sli), cap(sli))
+
+	// type Person struct {
+	// 	name string
+	// 	age  int
+	// }
+
+	// var p1 Person
+
+	// p1.name = "Kushal"
+	// p1.age = 23
+
+	// fmt.Println(p1)
+	// x := []int{4, 8, 5}
+	// y := -1
+	// for _, elt := range x {
+	// 	if elt > y {
+	// 		y = elt
+	// 	}
+	// }
+	// fmt.Print(y)
+
+	// x := [...]int{4, 8, 5}
+	// y := x[0:2]
+	// z := x[1:3]
+	// y[0] = 1
+	// z[1] = 3
+	// fmt.Print(x)\
+	// x := map[string]int{
+	// 	"ian": 1, "harris": 2}
+	// for i, j := range x {
+	// 	if i == "harris" {
+	// 		fmt.Print(i, j)
+	// 	}
+	// }
+
+}

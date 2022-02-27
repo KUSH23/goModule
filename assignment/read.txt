@@ -1,0 +1,50 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strings"
+)
+
+type name struct {
+	fname string
+	lname string
+}
+
+func main() {
+
+	var filename string
+
+	fmt.Println("Enter file path/name with .txt")
+	fmt.Scanln(&filename)
+
+	namearray := make([]name, 0)
+
+	myfile, err := os.Open(filename)
+
+	if err != nil {
+		log.Fatalf("failed to open")
+	}
+
+	scanner := bufio.NewScanner(myfile)
+
+	scanner.Split(bufio.ScanLines)
+
+	for scanner.Scan() {
+		var n1 name
+		words := strings.Fields(scanner.Text())
+		n1.fname = words[0]
+		n1.lname = words[1]
+		namearray = append(namearray, n1)
+	}
+
+	myfile.Close()
+
+	// fmt.Println(namearray)
+
+	for _, elt := range namearray {
+		fmt.Println(elt.fname, elt.lname)
+	}
+}
